@@ -24,12 +24,14 @@ function speedRegulator(){
 }
 function demeritCalculator(speed){
     let exceededSpeed=speed-speedLimit;
-    let demeritPoints=Math.floor(exceededSpeed/kmDemirit);
+    let demeritPoints=Math.ceil(exceededSpeed/kmDemirit);
     if(demeritPoints<12){
         console.log(`You have the following demerit points : ${demeritPoints}`);
-        alert(`You have the following demerit points : ${demeritPoints}`);
-    }else{
+        alert(` WARNING !!!! You have the following demerit points : ${demeritPoints}`);
+    }
+    else{
         console.log(`LICENCE SUSPENDED ,DEMERIT POINTS: ${demeritPoints}`);
+        alert(`LICENCE SUSPENDED ,DEMERIT POINTS: ${demeritPoints}`);
     }
 }
 
