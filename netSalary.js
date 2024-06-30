@@ -1,7 +1,9 @@
 function salaryCalculator(){
+    //this prompts the user to enter the basic salary and the benefits he/she is getting and the prompt is saved in variables
     let basicSalary=prompt('Enter your basic salary');
     let benefits=prompt('Enter your benefits/allowance');
 
+    //since we are working with numbers and we want to validate the input easily we convert the input to number data type
     basicSalary=Number(basicSalary);
     benefits=Number(benefits);
 
@@ -13,14 +15,16 @@ function salaryCalculator(){
         return;
     }
 
+    //money without mathematics is dangerous ,so we first define different variables to store some calculations
+
     let grossSalary=basicSalary + benefits;
-    let nssfDeductions=grossSalary*0.06;
+    let nssfDeductions=grossSalary*0.06; //nsff rate is 60% to each an everyone
     let taxableIncome=grossSalary-nssfDeductions;
-    let payee=payeeFunction(taxableIncome);
-    let nhif=nhifFunction(taxableIncome);
+    let payee=payeeFunction(taxableIncome); //here I have invoked the payeeFunction .that takes in taxableIncome as its argument.the payeeFunction returns the tax based on the taxable income
+    let nhif=nhifFunction(taxableIncome); //here I have invoked the nhifFunction ,that takes in the taxable income as is argument ,the nhifFunction returns the nhif value based on the taxable income
     let netSalary=grossSalary-nssfDeductions-payee-nhif;
 
-    
+    //HERE WE OUTPUT THE EVERYTHING THE USER NEEDS TO KNOW THROUGH THE CONSOLE AND DOCUMENT 
     console.log(`YOUR GROSS SALARY IS ${grossSalary}`);
     alert(`YOUR GROSS SALARY IS ${grossSalary}`);
 
@@ -41,7 +45,7 @@ function salaryCalculator(){
 
 }
 
-
+//This function takes in the taxable income and returns the nhif value based on the value of the income .I have used if else if to evaluate different income values
 function nhifFunction(taxableIncome){
     if(taxableIncome<=5999){
        return 150;
@@ -98,6 +102,8 @@ function nhifFunction(taxableIncome){
 
 }
 
+
+//the payeeFunction returns the paye based on different incomes ,each income bracket has a different tax rate
 function payeeFunction(taxableIncome){
     if(taxableIncome<=24000){
         return taxableIncome*0.1;
