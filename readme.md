@@ -52,4 +52,30 @@ For example, if the speed is 80, it should print: “Points: 2”. If the driver
     11.I have used conditional statements to evaluate  I whether the the demerits are greater than 12 .if the demerits are greater than 12 .The driver gets his licenced cancelled else if the demerit points are less than 12 ,the program will only warn the driver.
     12.The program will output in the console and in the document through the alert function.
 
+## 3.Net Salary Calculator (Toy Problem)
+Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary. 
+
+NB: Use KRA, NHIF, and NSSF values provided in the link below.
+
+- https://www.aren.co.ke/payroll/taxrates.htm Links to an external site.
+
+Links to an external site.-  Links to an external site.Links to an external site.
+
+- www.kra.go.ke/en/individual/calculate-tax/calculating-tax/payeLinks to an external site.
+
+
+### APPROACH
+    1.The first approach I used is I asked myself the general formula of calculating the net salary.
+    2.Since the user has to enter his/her salary ,I have written a function salaryCalculator that prompts the user to enter his/her basic salary and the benefits
+    3.The basic salary and the benefits entered by the user must be stored in different variables since we will the data to achieve a specific purpose.
+    4.I convert the data entered to number since the whole projet wll be about comparison of numbers
+    5.The next step is to validate the data entered by the user and if the user has entered is invalid the program prompts the user to enter the correct data
+    6.Since I have the basic salary and benefits .We can calculate the taxable income ,the nssf,the paye and the net salary.
+    7.The gross salary is the basic salary + benefits
+    8.The taxable income is the gross salary-nssf.
+    9.The nssf is 6% of the gross salary.
+    10.Since we have the taxable income ,we can calculate the nhif and paye.since the paye and nhif deductions are structured ,I have used different functions to calculate the paye and nhif.
+    11.The paye function takes in the taxable income as an argument ,I have used conditional statements if else if to evaluate the taxable income fits in which deduction bracket.I have invoked the payFunction in the payee variable which is inside the salaryCalculator function
+    12.The nhif function takes in the taxable income as an argument ,I have used conditional statements if else if to evaluate the taxable income fits in which deduction bracket.I have invoked the nhifFunction in the payee variable which is inside the salaryCalculator function
+    13.The output is dispalyed in the console/web document
 

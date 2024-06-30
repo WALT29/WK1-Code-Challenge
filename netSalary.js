@@ -1,3 +1,4 @@
+
 function salaryCalculator(){
     //this prompts the user to enter the basic salary and the benefits he/she is getting and the prompt is saved in variables
     let basicSalary=prompt('Enter your basic salary');
