@@ -34,7 +34,7 @@ if(marks>79){
     console.log(`There is Room for Improvement You have a ${grade}`);
     alert(`There is Room for Improvement You have a : ${grade}`);
 
-}else if(marks<40){
+}else if(marks<40 && marks>0){
     grade='E';
     console.log(`SEE ME ! You have an ${grade}`);
     alert(`SEE ME ! You have an : ${grade}`);
